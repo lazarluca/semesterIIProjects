@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+    width: 100%;
+    height: 100%;
+    background: url('images/desktopbg.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+body {
+    animation: appear 1s linear forwards;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    color: #878787;
+    padding: 0;
+    margin: 0;
+}
+header {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 100;
+
+}
+input {
+    width: 10em;
+    background-color: transparent;
+    border: 0;
+}
+article {
+    width:250px;
+    height: 370px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    animation: appear 1s linear forwards;
+    margin: auto;
+    margin-bottom: 7em;
+    transition: all 1s;
+}
+main {
+    text-align: center;
+}
+article div p {
+    display: block;
+}
+button {
+    border: black solid 1px;
+    border-bottom: 0;
+    font-size: 1em;
+    color: white;
+    display: none;
+    position: absolute;
+    top: -8%;
+    left: 25%;
+    background-color: #f3988f;
+    animation: buttonAppear 0.5s linear forwards;
+    cursor: pointer;
+}
+.up {
+    margin-top: 2.5em;
+
+}
+.down {
+    margin-top: -2.5em;
+}
+#fancyPic {
+    background-image: url(images/white.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 39vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    animation: changebg 2s linear infinite;
+}
+#content {
+    animation: appear 1s linear forwards;
+}
+#noText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#noItem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+#filterI {
+    background-color: #ffffff;
+    opacity: 0.54;
+    width: 100%;
+    height: 2em;
+    position: absolute;
+    z-index: -1;
+    transition: opacity 1s;
+}
+#searchBox {
+    border-bottom: gray 1px solid;
+    display: inline-block;
+    float: left;
+    margin: 0.1em;
+    margin-left: 1em;
+}
+input:focus {
+    outline: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+#lupa {
+    display: inline-block;
+    margin-right: 0.2em;
+    transform: rotate(-45deg);
+    margin-bottom: -0.3em;
+}
+#logo {
+    background-image: url("images/logo.png");
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 256px;
+    margin: auto;
+    display: inline-block;
+    margin-left: -75px;
+    margin-top: 0.20em;
+    cursor: pointer;
+}
+#shoppingCart {
+    background-image: url("images/button-02.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    float: right;
+    display: inline-block;
+    margin-top: -0.25em;
+    cursor: pointer;
+
+}
+#photoI,
+#photoII {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: flash 3s linear infinite;
+    width: 30vw;
+    height: 63vh;
+    display: inline-block;
+    position: fixed;
+    top: 8%;
+    z-index: -1;
+}
+#photoI {
+    background-image: url("images/catalogpic-04.jpg");
+    left: 19%;
+    border:black solid 1px;
+}
+#photoII {
+    background-image: url("images/catalogpic-05.jpg");
+    border:black solid 1px;
+}
+#categories {
+    width: 100vw;
+    position: absolute;
+    top: 60%;
+}
+#searchEngine {display: none}
+#description,
+#color,
+#materials {
+    width: 80%;
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: appear 1s linear forwards;
+}
+#description {
+    top: 25%;
+}
+#materials {
+    top: 50%;
+}
+#image {
+    width: 250px;
+    height: 340px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    margin: auto;
+    border: gray solid 1px;
+    z-index: 4;
+
+}
+#blur {
+    display: none;
+    width: 250px;
+    height: 340px;
+    margin-bottom: -220px;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: blurry 1.5s linear forwards;
+}
+#container {
+    display: grid;
+    grid-gap: 3vw;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 80%;
+    margin: auto;
+    margin-top: 22vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.categories {
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50vw;
+    height: 45vh;
+    margin: -3.1px;
+    cursor: pointer;
+}
+#rings {
+    display: block;
+    width: 100%;
+    background-image: url("images/rings1.jpg");
+    border-top:black solid 1px;
+
+}
+#earrings {
+    background-image: url("images/earrings1.jpg");
+}
+#bracelets {
+    background-image: url("images/bracelets1.jpg");
+    display: block;
+    width: 100%;
+}
+#contact {
+    min-width: 60%;
+    display: inline-block;
+    margin: auto;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    margin-top: 16vh;
+}
+
+#cufflinks {
+    background-image: url("images/cufflinks1.jpg");
+}
+#brooch {
+    background-image: url("images/brooches1.jpg");
+}
+
+#watches {
+    display: block;
+    width: 100%;
+    background-image: url("images/watches1.jpg");
+}
+
+#neklace {
+    background-image: url("images/necklaces1.jpg");
+}
+@keyframes buttonAppear {
+    0% { height: 0;opacity: 0;}
+    100% {height: 8%;opacity: 1;}
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes blurry {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(37px);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes changebg {
+    0% {
+        background-image: url('images/white.jpg');
+    }
+
+    25% {
+        background-image: url('images/pink.jpg');
+
+    }
+
+    50% {
+        background-image: url('images/white.jpg');
+
+    }
+
+    75% {
+        background-image: url('images/pink.jpg');
+
+    }
+
+    100% {
+        background-image: url('images/white.jpg');
+    }
+}
+
+.group7 {
+    display: none;
+}
+
+.text {
+    color: #707070;
+}
+.containerI {
+    display: block;
+    float: right;
+    left: 70%;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.logo {
+    background-image: url("images/logo.png");
+    width: 262px;
+    height: 47px;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#cataLog {
+    display: inline-block;
+    font-size: 1.3em;
+    padding: .8em 3em;
+    width: 30%;
+    color: #707070;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+@media only screen and (min-width: 2000px) {
+    input {
+    width: 20em;
+    font-size: 1em;
+    }
+    #gender {
+        top: 8%;
+    }
+    #lupa {
+        font-size: 2em;
+    }
+    #filterI {
+        height: 3em;
+    }
+    #logo {
+        margin-left: -458px;
+        margin-top: 0.60em;
+    }
+    #shoppingCart {
+        height: 70px;
+        width: 70px;
+        margin-top: 0;
+    }
+    #searchBox {
+        margin: -0.2em;
+        margin-left: 1em;
+    }
+    .logo {
+        width: 352px;
+        height: 70px;
+    }
+}
+@media only screen and (max-width: 1025px) {
+    #container {
+         display: block;
+        width: 80%;
+        margin: auto;
+        margin-top: 22vh;
+        max-height: 100%;
+    }
+    #gender {
+        font-size: 0.79em;
+        top: 10%;
+    }
+    #fancyPic {
+        display: none;
+    }
+    #filterI {
+        background-color: #ffffff;
+        opacity: 1;
+        width: 100%;
+        height: 3.5em;
+        position: absolute;
+        z-index: -1;
+    }
+    #searchBox {
+        border-bottom: gray 1px solid;
+        display: inline-block;
+        margin: 0.1em;
+        margin-left: 1em;
+        position: absolute;
+        top: 105%;
+        width: 75%;
+        left: -1%;
+    }
+    #search {
+        width: 65vw;
+    }
+    input {
+        width: 10em;
+        background-color: transparent;
+        border: 0;
+        float: left;
+    }
+    #shoppingCart {
+        background-image: url(images/button-02.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 60px;
+        float: right;
+        display: inline-block;
+        margin-top: -0.25em;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+    }
+    #logo {
+        margin-left: 0;
+    }
+    .categories {
+        margin-top: 3.20em;
+        top: 11.1%;
+        height: 30vh;
+    }
+    #lupa {
+        display: inline-block;
+        margin-right: 0.2em;
+        transform: rotate(-45deg);
+        margin-bottom: -0.3em;
+        float: left;
+        height: 1.5em;
+        margin-top: -0.33em
+    }
+    #inputBox {
+        height: 2em;
+    }
+    .up {
+        margin-top: 2.5em;
+
+    }
+    .down {
+        margin-top:0em;
+    }
+    html {
+        background-image: url('images/mobilebg.jpg');
+    }
+    #container {
+        margin-top:19vh;
+    }
+    #categories{
+        top: 6%;
+    }
+    #photoI {
+        display: none;
+    }
+    #photoII {
+        display: none;
+
+    }
+    .group7 {
+        background: url(images/mobilepic.jpg) no-repeat;
+        width: 90%;
+        height: 50vh;
+        display: block;
+        background-size: 100% 100%;
+        animation: changebg 2s linear infinite;
+        margin: auto;
+    }
+    .logo {
+        background-image: url("images/logo.png");
+        width: 300px;
+        height: 80px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: auto;
+    }
+    #cataLog {
+        display: block;
+        padding: 8px 40px;
+        width: 50%;
+        font-size: 1.1em;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+
+    .text {
+        color: #707070;
+        margin-top: 2vh;
+    }
+
+    .containerI {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        text-align: center;
+        transform: translateX(-50%);
+    }
+    .categories {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    #rings {
+        background-image: url("images/rings2.jpg");
+        border: 0;
+    }
+    #earrings {
+        background-image: url("images/earrings2.jpg");
+    }
+    #bracelets {
+        background-image: url("images/bracelets2.jpg");
+    }
+    #cufflinks {
+        background-image: url("images/cufflinks2.jpg");
+    }
+    #brooch {
+        background-image: url("images/brooches2.jpg");
+    }
+
+    #watches {
+        background-image: url("images/watches2.jpg");
+    }
+
+    #neklace {
+        background-image: url("images/necklaces2.jpg");
+    }
+    @keyframes changebg {
+        0% {
+            background-image: url('images/mobilewhite.jpg');
+        }
+
+        25% {
+            background-image: url('images/mobilepic.jpg');
+        }
+
+        50% {
+            background-image: url('images/mobilewhite.jpg');
+        }
+
+        75% {
+            background-image: url('images/mobilepic.jpg');
+        }
+
+        100% {
+            background-image: url('images/mobilewhite.jpg');
+        }
+    }
+
+}
+
